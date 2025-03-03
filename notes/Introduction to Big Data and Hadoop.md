@@ -1,0 +1,162 @@
+# Big Data
+
+> Big Data refers to the data which is large, fast and complex type of structured, semi-structured and unstructured generated from variety of different sources, which become difficult to store and process using a traditional processing system
+
+**Two Challenges of Big Data**
+
+1. Storage : Distributed Storage System
+2. Processing : Massive Parallel Processing (MPP)
+
+
+
+* Batch Processing
+* Real-time Processing
+* Data Lake
+* Data Warehouse
+* Delta Lake
+
+
+
+## Introduction to Modern Data Architecture
+
+> Data Architecture defines how data is collected, stored, processed and accessed within an organization
+
+1. Lambda Architecture
+2. Kappa Architecture
+
+### Lambda Architecture
+
+> Lambda Architecture is a hybrid architecture which combines batch processing and stream processing 
+
+Components of Lambda architecture
+
+1. Batch Layer : Processed historical data in batches
+2. Speed Layer (Streaming Layer) : Can handle real-time data for low latency
+3. Serving Layer : Merges batch and streaming results for query access.
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf9ePpCfXLoaFMDyqzXmF3cKxs7z4WTGMZgRCnJM2iHfkQ5sJofaEbBhEUTBs5Q5EdwEH_ghGxh-bj1jUT4-P6FKZDQMoP2kebXbzprvqaBm5YZE9raNP3jODWGYYY4XVqPFBl8lQ?key=JNvWNzN6GKpO5Hu0TXZ9cCfI)
+
+
+
+
+
+### Kappa Architecture
+
+> Kappa architecture is a simplified version of lambda, where all the data processing happens in stream processing
+
+
+
+## Hadoop 2.x (Distributed Storage and Processing framework)
+
+> Apache Hadoop is a software framework that allows us to store and process large datasets in parallel and distributed fashion
+
+Hadoop consists of three
+
+1. Storage Layer ; HDFS (Hadoop Distributed FS)
+   1. It is a primary storage layer
+2. Resource Management Layer : YARN (Yet Another Resource Negotiator)
+   1. It is used for Job scheduling and managing cluster resource (RAM, CPU)
+3. Processing Layer : MapReduce
+   1. MapReduce is a programming model to process the data in parallel in multiple machines
+   2. It is deprecated and we use Apache Spark for parallel processing
+
+
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcfKOAAVkZmZyXDdiFJ_DwKZYuHemM0Z9-kVB_xRoUYwmjezzBguZ2rqgiyRHAhqFqIitKI7Rtf9EKEUr1Q9qQD8-1TfsmLNlL563C7mMa1WwnM1SrJTmP-XGoC6nhyaRGYBvV7hH3-3laOgwHz79KqInX3?key=Lcjgu0sLjm8U8i3A_14gRg)
+
+## Hadoop Daemon Services
+
+1. NameNode
+2. DataNode
+3. SecondaryNameNode
+4. ResourceManager
+5. NodeManager
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf6Ibv2_Jm1wQ2Mlp3qSJPyDMqNRw0HK7xTzl2PSVBSYtAiNGYmAtP9By8TVXDG0LO0zCcrsXmVSVHHxphVhFXVpEWhdMc2-dHEdCWO1zCk0RroPGEyC3ipps8yhwzjLPUJ9iY0rClmIL1Q0-pz2gFLhQw?key=Lcjgu0sLjm8U8i3A_14gRg)
+
+## Master and Slave Architecture
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXe_B_QnCVH8fSc-SgNwecoRhPr63uuIqdimzMoSuussi4-bNiBCXS0T9s3JTIO0efzuTW30dJ4uOm6cH6YMSRFxgfcW1PbjfPuHW2KAQSGPI-5tGq26TaEp-4WyrQR6YqscidbCd2qoACGY0hBnnSGB2Tbu?key=Lcjgu0sLjm8U8i3A_14gRg)
+
+## HDFS and Architecture
+
+> HDFS is a **Distributed and Scalable ** file system designed for storing large files.
+
+![img](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcbQGBG2Xk-cq6zcOawO1oz67huX2NWhepjiisjo72V7ijiMyK9MtPWgOgfbmPYmoJgiMM2V9DbUAgCkJANdHiq5OGqQkT7Ci1jmluOughPDEOPX9i7fwoKhDkRyp0gTIIqfUZyQxN2Kh3lQaFw8dTqRcnF?key=Lcjgu0sLjm8U8i3A_14gRg)
+
+
+
+## HDFS Architecture
+
+
+
+
+
+DataProc (GCP) / AWS (EMR) / Azure (HDInsight)
+
+
+
+
+
+## Hadoop Commands
+
+1. HDFS Commands
+2. YARN Commands
+
+### HDFS Commands
+
+#### dfs commands
+
+```
+hdfs dfs -ls /
+```
+
+```
+hdfs dfs -mkdir /walmart
+```
+
+**Copy data from LFS to HDFS**
+
+```
+hdfs dfs -put file01.txt /walmart
+hdfs dfs -copyFromLocal file02.txt /walmart
+```
+
+**Copy data from HDFS to LFS**
+
+```
+hdfs dfs -get /walmart/file01.txt /tmp
+hdfs dfs -copyToLocal /walmart/file02.txt /tmp
+```
+
+
+
+#### dfsadmin
+
+```
+hdfs dfsadmin -printToplogy
+hdfs dfsadmin -report
+```
+
+```
+hdfs dfsadmin -safemode enter
+```
+
+
+
+### YARN Commands
+
+```
+yarn jar hadoop-mapreduce-examples-2.10.2.jar wordcount /walmart /output_03032025
+```
+
+
+
+
+
+
+
+
+
+
+
