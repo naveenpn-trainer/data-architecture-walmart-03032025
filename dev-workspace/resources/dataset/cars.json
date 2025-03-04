@@ -1,0 +1,47 @@
+[
+    {
+        "maker": "Hyundai",
+        "model": "Creta",
+        "fuel_type": "Diesel",
+        "transmission": "Manual",
+        "engine": {
+            "type": "Naturally Aspirated",
+            "cc": 1493,
+            "torque": "250 Nm"
+        },
+        "features": ["Sunroof", "Leather Seats", "Wireless Charging", "Ventilated Seats", "Bluetooth"],
+        "sunroof": true,
+        "airbags": 6,
+        "price": 1500000,
+        "owners": [
+            {"name": "Raju", "purchase_date": "2021-03-15", "location": "Mumbai"},
+            {"name": "Shyam", "purchase_date": "2023-01-10", "location": "Delhi"}
+        ],
+        "service_history": [
+            {"date": "2022-04-10", "service_type": "Oil Change", "cost": 5000},
+            {"date": "2023-07-18", "service_type": "Brake Replacement", "cost": 12000}
+        ]
+    },
+    {
+        "maker": "Maruti Suzuki",
+        "model": "Baleno",
+        "fuel_type": "Petrol",
+        "transmission": "Automatic",
+        "engine": {
+            "type": "Naturally Aspirated",
+            "cc": 1197,
+            "torque": "113 Nm"
+        },
+        "features": ["Projector Headlamps", "Apple CarPlay", "ABS"],
+        "sunroof": false,
+        "airbags": 2,
+        "price": 800000,
+        "owners": [
+            {"name": "Baburao", "purchase_date": "2020-08-22", "location": "Pune"}
+        ],
+        "service_history": [
+            {"date": "2021-05-12", "service_type": "Tire Rotation", "cost": 2000},
+            {"date": "2022-11-05", "service_type": "Battery Replacement", "cost": 7000}
+        ]
+    }
+]

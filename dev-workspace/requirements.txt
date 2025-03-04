@@ -1,2 +1,6 @@
 # Apache Spark
 pyspark==3.2.4
+
+
+# Firestore
+google-cloud-firestore
